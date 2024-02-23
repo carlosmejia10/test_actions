@@ -16,9 +16,9 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: npm install
-      - name: start
-        run: npm start
+      - name: Build
+        run: npm run build
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25.1.1
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+            vercel-token: ${{ secrets.VERCEL_TOKEN }}
