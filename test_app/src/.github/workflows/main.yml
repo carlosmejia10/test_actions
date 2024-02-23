@@ -15,9 +15,10 @@ jobs:
         with:
           node-version: 14
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Build
         run: npm run build
+        working-directory: /c:/Users/mejia/Desktop/githubActions/test_actions/test_app
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25.1.1
         with:
